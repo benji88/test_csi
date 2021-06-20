@@ -11,6 +11,7 @@
     background-color: #009879;
     color: #ffffff;
     text-align: left;
+    text-transform: uppercase;
 }
 
 .styled-table th,
@@ -30,9 +31,15 @@
     border-bottom: 2px solid #009879;
 }
 
+/* does not seem to work
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+*/
+
+.styled-table tbody tr:hover {
+    border: 2px solid #776666;
 }
 
 input[type="submit"]
@@ -52,9 +59,19 @@ input[type="submit"]:hover
 }
 
 input[type="text"] {
-    width: 420px;
+  цidth: 420px;
 }
 
+
+.header_controls {
+  width: 120px;
+  height: 30px;
+  margin-left: 5pt;
+  border-radius: 15px;
+  font-size: 1.0em;
+  background-color: #009060;
+  color: #ffffff;
+}
 
 .mainframe {
  position: absolute;
@@ -68,6 +85,13 @@ input[type="text"] {
  border-collapse: collapse; 
 }
 
+.long_select {
+  width: 420px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  -webkit-appearance: none;
+}
 
 /* input fields customization */
 .mandatory:placeholder-shown {
@@ -82,6 +106,9 @@ input[type="text"] {
     background: default;
 }
 
+.separator {
+   border-top: 1px solid black;
+}
 
 .debug {
  /*border: 1px solid red;*/

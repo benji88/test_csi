@@ -8,26 +8,44 @@
   	</title>
   </head>
   <body>
-  <form action="/submit" method="get">
+  <script>
+    /*alert("Заявителю известно, что в соответствии с пунктом 4 части 1 статьи 6 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных» (Собрание законодательства Российской Федерации, 2006, № 31, ст. 3451; 2020, № 17, ст. 2701) (далее – Федеральный закон от 27 июля 2006 г. № 152-ФЗ) Федеральная служба по интеллектуальной собственности осуществляет обработку персональных данных субъектов персональных данных, указанных в заявке, в целях и объеме, необходимых для предоставления государственной услуги. Заявитель подтверждает наличие согласия других субъектов персональных данных, указанных в заявке (за исключением согласия представителя), на обработку их персональных данных, приведенных в настоящей заявке, в Федеральной службе по интеллектуальной собственности в связи с предоставлением государственной услуги. Согласия оформлены в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. № 152-ФЗ. Заявителю известно, что с информацией о состоянии делопроизводства, в том числе о направленных заявителю документах, можно ознакомиться на сайтах Роспатента (www.rupto.ru) и ФИПС (www.fips.ru) в информационно-телекоммуникационной сети «Интернет»."
+    );*/
+  </script>
+  <div id="load_container" class="mainframe" align="center">
+      <img src="../img/loading.gif"/>
+  </div>
+  <form action="/submit" method="get" id="form_container" style="visibility: hidden;">
+
     <div id="contact_data_subform">
     </div>
-
     <br />
-    <h3>Заявители - физические лица</h3>
-    <div id="indiv_appl_subform">
-    </div>
-    <h3>Заявители - организации</h3>
-    <div id="inst_appl_subform">
+    <br />
+
+    <div id="applicants_men_subform">
     </div>
     <br />
     <br />
 
-    <h3>Представитель заявителя</h3>
+    <div id="applicants_inst_subform">
+    </div>
+    <br />
+    <br />
+
     <div id="representative">
     </div>
     <br />
     <br />
 
+    <div id="representative_legal_subform">
+    </div>
+    <br />
+    <br />
+
+    <div id="representative_other_subform">
+    </div>
+    <br />
+    <br />
     
     <div id="trademark_info_subform">
     </div>
@@ -47,9 +65,14 @@
 
   <br />
   <br />
-  <h3>Пошлина</h3>
-  
-  <input type="submit" value="Отправить" />
+  <div id="tax_subform">
+  </div> 
+
+  <br />
+  <br />
+  <div id="documents_subform">
+  </div>
+  <input type="submit" value="Отправить" onclick="javascript:confirm('Подтверждение')" />
   </form>
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
